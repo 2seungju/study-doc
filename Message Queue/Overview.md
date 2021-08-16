@@ -3,9 +3,8 @@
 
 
 ## 1. 메시지 큐란?
-* 메시지 지향 미들웨어 (Message Oriented Middleware: MOM)
-    >1. 비동기 메시지를 사용하는 다른 애플리케이션 사이에서 데이터 송수신을 이용하는 것이다.
-    >2. MOM을 구현한 시스템을 메시지 큐(MQ)라고 한다.
+1. 애플리케이션에서 데이터를 서로 교환할때 사용하는 통신 방법(메시지 지향 미들웨어-Message Oriented Middleware: MOM)
+2. MOM을 구현한 시스템을 메시지 브로커라고 한다.
 
 ## 2. 메시지 큐의 장점
 * 비동기 (Asynchronous) : 큐에 넣기 때문에 비동기적으로 처리 가능
@@ -31,7 +30,7 @@ producer, consumer 그리고 Broker(MQ 시스템 - RabbitMQ, Kafka)는 같은 ho
 ## 4. 메시지 큐 오픈 소스
 * RabbitMQ
     >1. AMQT 프로토콜을 구현해 놓은 프로그램 (다른 STOMP, MQTT, HTTP 프로토콜 사용 가능)
-    >2. 로컬 네트워크에 있는 여러 RabbitMQ 서버를 논리적으로 클러스터링할 수 있고, 논리적은 브로커도 가능
+    >2. 로컬 네트워크에 있는 여러 RabbitMQ 서버를 논리적으로 클러스터링할 수 있고, 논리적인 브로커도 가능
     >3. 관리 UI가 있어 편하게 관리 가능
     >4. 대부분의 언어와 운영체제를 지원
 
@@ -44,6 +43,4 @@ producer, consumer 그리고 Broker(MQ 시스템 - RabbitMQ, Kafka)는 같은 ho
     >2. 기존 메시징 시스템 대비 TPS(Transaction per Second)가 우수
     >3. 데이터를 유실없이 안전하게 전달하는 것이 주 목적(Falut-Tolerant)
     >4. 클러스터링 가능 및 스케일 아웃 가능
-
-
 
