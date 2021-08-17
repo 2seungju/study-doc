@@ -14,17 +14,11 @@
 * 보증 (Guarantees) : 작업이 처리된 것을 확인할 수 있음
 * 확장성 (Scalable) : 다수의 프로세스들이 큐에 메시지를 보낼 수 있음
 
-## 3. 구조
-크게 Producer, Queue, Consumer로 나눌 수 있다.
-- Producer : 메시지를 보내는 프로그램
-- Queue : 모든 메시지를 저장하는 큐이다. 우체통같은 역할을 수행한다.
-- Consumer : 메시지 수신하는 프로그램
-
-![mq_overview](/image/mq/mq%20overview.jpg)
-
-producer, consumer 그리고 Broker(MQ 시스템 - RabbitMQ, Kafka)는 같은 host내에서 상주할 필요는 없고, 각각의 어플리케이션은 producer, consumer 둘 다 될 수 있다.
-
-![mq_broker](/image/mq/broker.png)
+## 3. Pub/Sub Model
+![mq_overview](/image/mq/pub&sub.png)   
+메시지를 발행하는 Publisher와 구독하는 Subscriber가 있고 그 중간에서 중개하는 역할을 하는 게 브로커이다.    
+이러한 모델을 사용하여 Pub/Sub간의 결합도를 낮출 수 있는데(Decoupling), 이을 통해 안정성과 확장성(Scalable)을 확보할 수 있다.
+또한, 비동기적(Asynchronous)으로 처리할 수 있다.
 
 
 ## 4. 메시지 큐 오픈 소스
